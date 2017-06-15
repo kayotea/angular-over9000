@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <form>
+      Initial Power Level: 
+      {{power}}
+      <select
+        [(ngModel)]="power" 
+        name="powerselect">
+          <option *ngFor="let power of powerpoints" value="{{power}}">{{power}}</option>
+        </select>
+      <input type="submit" value="Calculate Powers">
+    </form><br>
+    <!---->
+    <!---->
+    <app-human class="box" [powerMult]="power"></app-human>
+    <app-saiyan class="box" [powerMult]="power"></app-saiyan>
+    <app-super-saiyan class="box" [powerMult]="power"></app-super-saiyan>
+    <app-super-saiyan-two class="box" [powerMult]="power"></app-super-saiyan-two>
+    <app-super-saiyan-three class="box" [powerMult]="power"></app-super-saiyan-three>
+    <app-super-saiyan-four class="box" [powerMult]="power"></app-super-saiyan-four>
+  </body>
+</html>
